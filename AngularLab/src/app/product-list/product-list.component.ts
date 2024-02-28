@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
 import { products } from '../products';
 import { Product } from '../products';
 
@@ -13,6 +15,19 @@ import { Product } from '../products';
 export class ProductListComponent {
 
   products = [...products];
+
+  constructor(private route: ActivatedRoute,) {}
+
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      const categoryName = params.get('categoryName');
+      if (categoryName) {
+        this.products = products.filter(product => product.categoryName === categoryName);
+      } else {
+        this.products = products;
+      }
+    });
+  }
 
   shareTelegram(p: Product) {
     const telegramUrl = `https://t.me/share/url?url=${encodeURIComponent(p.link)}`;

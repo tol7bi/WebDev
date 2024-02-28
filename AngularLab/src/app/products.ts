@@ -4,9 +4,10 @@ export interface Product {
   price: number;
   description: string;
   link: string;
-  image?: string;
+  image: string;
   rating: number;
-
+  likes:number;
+  categoryName:string;
 }
 
 export const products= [
@@ -17,7 +18,9 @@ export const products= [
     description: 'Ipad создан специально для ваших любимых занятий. Работайте, играйте, творите, учитесь, общайтесь и делайте множество других дел',
     link:'https://kaspi.kz/shop/p/apple-ipad-2021-wi-fi-10-2-djuim-3-gb-64-gb-seryi-102301598/?c=750000000',
     image: 'https://resources.cdn-kaspi.kz/img/m/p/he4/hdd/64320699203614.jpg?format=gallery-medium',
-    rating: 5
+    rating: 5,
+    categoryName: 'Devices',
+    likes: 0
   },
   {
     id: 2,
@@ -26,7 +29,9 @@ export const products= [
     description: 'Поразительно, но система на чипе Apple M1 вмещает 16 миллиардов транзисторов и объединяет центральный и графический процессоры, систему Neural Engine',
     link:'https://kaspi.kz/shop/p/apple-macbook-air-13-mgn63-seryi-100797845/?c=750000000',
     image: 'https://resources.cdn-kaspi.kz/img/m/p/h73/h87/63947822596126.jpg?format=gallery-medium',
-    rating: 4
+    rating: 4,
+    categoryName: 'Notebook',
+    likes: 0
   },
   {
     id: 3,
@@ -35,7 +40,9 @@ export const products= [
     description: 'Мышь Magic Mouse 2 получила не только новый дизайн, но и возможность перезарядки. А это значит, что вам больше не нужны обычные батарейки',
     link:'https://kaspi.kz/shop/p/apple-magic-mouse-2-usb-c-belyi-103539318/?c=750000000',
     image: 'https://resources.cdn-kaspi.kz/img/m/p/h0a/h98/81177555402782.jpg?format=gallery-medium',
-    rating: 3
+    rating: 3,
+    categoryName: 'Other',
+    likes: 0
   },
   {
     id: 4,
@@ -44,7 +51,9 @@ export const products= [
     description: 'Bluetooth гарнитура Apple AirPods Max сможет полностью изменить ваше представление о полноразмерных наушниках.',
     link:'https://kaspi.kz/shop/p/apple-airpods-max-serebristyi-100949286/?c=750000000',
     image: 'https://resources.cdn-kaspi.kz/img/m/p/h97/h0d/64141045628958.jpg?format=gallery-medium',
-    rating: 5
+    rating: 5,
+    categoryName: 'Headphones',
+    likes: 0
   },
   {
     id: 5,
@@ -53,7 +62,9 @@ export const products= [
     description: 'Наушники Apple AirPods Pro 2nd generation with Wireless MagSafe Charging Case белый',
     link:'https://kaspi.kz/shop/p/apple-airpods-pro-2nd-generation-with-wireless-magsafe-charging-case-belyi-113677582/?c=750000000',
     image: 'https://resources.cdn-kaspi.kz/img/m/p/ha3/h07/84108189630494.jpg?format=gallery-medium',
-    rating: 5
+    rating: 5,
+    categoryName: 'Headphones',
+    likes: 0
   },
   {
     id: 6,
@@ -62,7 +73,9 @@ export const products= [
     description: 'Большой дисплей Retina, на котором поместится всё, что нужно. Продвинутые датчики для отслеживания любой физической активности. Полезные функции, которые помогают следить за показателями здоровья и заботятся о Вашей безопасности.',
     link:'https://kaspi.kz/shop/p/apple-watch-se-40-mm-chernyi-100568123/?c=750000000',
     image: 'https://resources.cdn-kaspi.kz/img/m/p/ha3/h60/63868199403550.jpg?format=gallery-medium',
-    rating: 3
+    rating: 3,
+    categoryName: 'Devices',
+    likes: 0
   },
   {
     id: 7,
@@ -71,7 +84,9 @@ export const products= [
     description: 'Клавиатура Ajazz AK820 Pro белый',
     link:'https://kaspi.kz/shop/p/ajazz-ak820-pro-belyi-115277471/?c=750000000',
     image: 'https://resources.cdn-kaspi.kz/img/m/p/hdf/hfa/84696373461022.png?format=gallery-medium',
-    rating: 4
+    rating: 4,
+    categoryName: 'Other',
+    likes: 0
   },
   {
     id: 8,
@@ -80,7 +95,9 @@ export const products= [
     description: 'Игровая приставка Sony PlayStation 5 Slim',
     link:'https://kaspi.kz/shop/p/sony-playstation-5-slim-114696098/?c=750000000',
     image: 'https://resources.cdn-kaspi.kz/img/m/p/hf1/h03/84526695677982.jpg?format=gallery-medium',
-    rating: 5
+    rating: 5,
+    categoryName: 'Other',
+    likes: 0
   },
   {
     id: 9,
@@ -89,7 +106,9 @@ export const products= [
     description: 'IdeaPad 3 стоит, как обычный ноутбук для повседневного использования, однако это устройство способно на большее.',
     link:'https://kaspi.kz/shop/p/lenovo-ideapad-3-15igl05-81wq00emrk-seryi-102878742/?c=750000000',
     image: 'https://resources.cdn-kaspi.kz/img/m/p/h89/haa/64373052571678.jpg?format=gallery-medium',
-    rating: 2
+    rating: 2,
+    categoryName: 'Notebook',
+    likes: 0
   },
   {
     id: 10,
@@ -98,7 +117,9 @@ export const products= [
     description: 'Самая легкая в мире цифровая зеркальная камера с поворотным экраном сочетает в себе съемку в традиционном положении и передовые технологии.',
     link:'https://kaspi.kz/shop/p/canon-eos-250d-ef-s-18-55-is-stm-kit-2240118/?c=750000000',
     image: 'https://resources.cdn-kaspi.kz/img/m/p/h9f/hf6/63832508596254.jpg?format=gallery-medium',
-    rating: 4
+    rating: 4,
+    categoryName: 'Other',
+    likes: 0
   },
 
 
