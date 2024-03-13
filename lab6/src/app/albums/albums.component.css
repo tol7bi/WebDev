@@ -1,0 +1,17 @@
+button {
+    background-color: rgb(220, 80, 64);
+    margin-left: 10px;
+}
+
+#add {
+    background-color: lightblue;
+}
+
+li {
+  position: relative;
+  padding-left: 20px; /* Adjust as needed */
+  margin-bottom: 10px; /* Adjust as needed */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
