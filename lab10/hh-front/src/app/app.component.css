@@ -1,0 +1,18 @@
+nav {
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px; /* Adjusted padding for top and bottom */
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 10px; /* Added padding for anchor elements */
+}
+
+a:hover {
+  color: #e9e9e9; /* Changed hover color to a lighter shade */
+}
+
